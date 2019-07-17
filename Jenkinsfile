@@ -4,7 +4,7 @@ pipeline {
     string(defaultValue: 'checkResult.py', description: 'PYTHON_FILE2', name: 'PYTHON_FILE2')
     string(defaultValue: 'on205_insertfrom161.sql', description: 'SQL_FILE', name: 'SQL_FILE')
     string(defaultValue: 'on205_insertfrom161_temp.sql', description: 'SQL_FILE_TEMP', name: 'SQL_FILE_TEMP')
-    string(defaultValue: 'check_183_insertfrom161.sql', description: 'SQL_FILE2', name: 'SQL_FILE2')
+    string(defaultValue: 'check_205_insertfrom161.sql', description: 'SQL_FILE2', name: 'SQL_FILE2')
     string(defaultValue: 'check_183_insertfrom161_temp.sql', description: 'SQL_FILE_TEMP2', name: 'SQL_FILE_TEMP2')
     string(defaultValue: 'C:/Users/user/PycharmProjects/pygame/plsql', description: 'FILE_PATH_PY', name: 'FILE_PATH_PY')
     string(defaultValue: 'D:/pyoracle', description: 'FILE_PATH_SQL', name: 'FILE_PATH_SQL')
@@ -39,7 +39,7 @@ pipeline {
         //sh "python ${params.FILE_PATH_PY}/${params.PYTHON_FILE}" //本地
       }
     } 
-    /*stage("2nd schema check") {
+    stage("2nd schema check") {
       steps {
         script{
           // to int
@@ -48,11 +48,11 @@ pipeline {
           // to string
           mth_end_str = mth_end_int as String
           // powershell
-          powershell "Get-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE_TEMP2} | ForEach-Object {\$_ -replace ('DATA_mth','${params.DATA_mth}') -replace ('mth_end', '${mth_end_str}') }| Set-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE2}"
+          //powershell "Get-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE_TEMP2} | ForEach-Object {\$_ -replace ('DATA_mth','${params.DATA_mth}') -replace ('mth_end', '${mth_end_str}') }| Set-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE2}"
         }
         // execute
         //sh "python ${params.FILE_PATH_PY}/${params.PYTHON_FILE2}" //本地
       }
-    }*/
+    }
   }
 }
