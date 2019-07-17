@@ -1,3 +1,3 @@
 # on205
-insert from 183
---3、月级指标结果表/图层 & SCENE_KPI_CELL_LIST_DAY
+insert from 161
+--由161直接流转的月级结果--'DIM_MRO_3G1D_GRID10_MTH','TDLTE_MRO_NICE_GRID50_MTH_GEO','XDR_GRID50_MTH'
