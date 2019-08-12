@@ -8,7 +8,7 @@ pipeline {
     string(defaultValue: 'check_183_insertfrom161_temp.sql', description: 'SQL_FILE_TEMP2', name: 'SQL_FILE_TEMP2')
     string(defaultValue: 'C:/Users/user/PycharmProjects/pygame/plsql', description: 'FILE_PATH_PY', name: 'FILE_PATH_PY')
     string(defaultValue: 'D:/pyoracle', description: 'FILE_PATH_SQL', name: 'FILE_PATH_SQL')
-    string(defaultValue: '20190701', description: 'DATA_d1', name: 'DATA_d1')
+    string(defaultValue: '20190724', description: 'DATA_d1', name: 'DATA_d1')
     string(defaultValue: '20190701', description: 'DATA_mth', name: 'DATA_mth')
   }
   agent any 
@@ -36,7 +36,7 @@ pipeline {
 
         }
                 // execute
-        //sh "python ${params.FILE_PATH_PY}/${params.PYTHON_FILE}" //本地
+        sh "python ${params.FILE_PATH_PY}/${params.PYTHON_FILE}" //本地
       }
     } 
     /*stage("2nd schema check") {
