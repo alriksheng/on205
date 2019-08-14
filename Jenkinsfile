@@ -2,7 +2,7 @@ pipeline {
   parameters {
     string(defaultValue: 'executeCall.py', description: 'PYTHON_FILE', name: 'PYTHON_FILE')
     string(defaultValue: 'checkResult.py', description: 'PYTHON_FILE2', name: 'PYTHON_FILE2')
-    string(defaultValue: 'on205_deleteindex.sql', description: 'SQL_FILE', name: 'SQL_FILE')
+    string(defaultValue: 'on205_createindex.sql', description: 'SQL_FILE', name: 'SQL_FILE')
     //string(defaultValue: 'on205_insertfrom183_temp.sql', description: 'SQL_FILE_TEMP', name: 'SQL_FILE_TEMP')
     string(defaultValue: 'check_183_insertfrom161.sql', description: 'SQL_FILE2', name: 'SQL_FILE2')
     string(defaultValue: 'check_183_insertfrom161_temp.sql', description: 'SQL_FILE_TEMP2', name: 'SQL_FILE_TEMP2')
