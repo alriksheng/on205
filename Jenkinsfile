@@ -9,7 +9,7 @@ pipeline {
     string(defaultValue: 'C:/Users/user/PycharmProjects/pygame/plsql', description: 'FILE_PATH_PY', name: 'FILE_PATH_PY')
     string(defaultValue: 'D:/pyoracle', description: 'FILE_PATH_SQL', name: 'FILE_PATH_SQL')
     string(defaultValue: '20190724', description: 'DATA_d1', name: 'DATA_d1')
-    string(defaultValue: '20190701', description: 'DATA_mth', name: 'DATA_mth')
+    string(defaultValue: '20190701', description: 'DATA_mth1', name: 'DATA_mth1')
   }
   agent any 
   stages {
@@ -32,7 +32,7 @@ pipeline {
           data_d6_str = data_d6_int as String
           data_d7_str = data_d7_int as String
           // powershell
-          powershell "Get-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE_TEMP} | ForEach-Object {\$_ -replace ('DATA_mth','${params.DATA_mth}') -replace ('mth_end', '${params.DATA_mth.toInteger()+29}') }| Set-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE}"
+          powershell "Get-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE_TEMP} | ForEach-Object {\$_ -replace ('DATA_mth1','${params.DATA_mth1}') -replace ('mth_end', '${params.DATA_mth1.toInteger()+29}') }| Set-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE}"
 
         }
                 // execute
