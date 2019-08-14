@@ -2,8 +2,8 @@ pipeline {
   parameters {
     string(defaultValue: 'executeCall.py', description: 'PYTHON_FILE', name: 'PYTHON_FILE')
     string(defaultValue: 'checkResult.py', description: 'PYTHON_FILE2', name: 'PYTHON_FILE2')
-    string(defaultValue: 'on205_insertfrom183.sql', description: 'SQL_FILE', name: 'SQL_FILE')
-    string(defaultValue: 'on205_insertfrom183_temp.sql', description: 'SQL_FILE_TEMP', name: 'SQL_FILE_TEMP')
+    string(defaultValue: 'on205_deleteindex.sql', description: 'SQL_FILE', name: 'SQL_FILE')
+    //string(defaultValue: 'on205_insertfrom183_temp.sql', description: 'SQL_FILE_TEMP', name: 'SQL_FILE_TEMP')
     string(defaultValue: 'check_183_insertfrom161.sql', description: 'SQL_FILE2', name: 'SQL_FILE2')
     string(defaultValue: 'check_183_insertfrom161_temp.sql', description: 'SQL_FILE_TEMP2', name: 'SQL_FILE_TEMP2')
     string(defaultValue: 'C:/Users/user/PycharmProjects/pygame/plsql', description: 'FILE_PATH_PY', name: 'FILE_PATH_PY')
@@ -32,7 +32,7 @@ pipeline {
           data_d6_str = data_d6_int as String
           data_d7_str = data_d7_int as String
           // powershell
-          powershell "Get-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE_TEMP} | ForEach-Object {\$_ -replace ('DATA_mth1','${params.DATA_mth1}') -replace ('mth_end', '${params.DATA_mth1.toInteger()+29}') }| Set-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE}"
+          //powershell "Get-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE_TEMP} | ForEach-Object {\$_ -replace ('DATA_mth1','${params.DATA_mth1}') -replace ('mth_end', '${params.DATA_mth1.toInteger()+29}') }| Set-Content ${params.FILE_PATH_SQL}/${params.SQL_FILE}"
 
         }
                 // execute
